@@ -140,9 +140,9 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid #ffdd57;
+  border-top: 1px solid #d3bc60;
   text-align: center;
   padding-top: 10px;
   font-size: 12px;
-  color: #cccccc;
+  color: lightcyan;
 }
