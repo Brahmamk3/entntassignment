@@ -1,0 +1,148 @@
+/* GENERAL LAYOUT */
+.layout-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.header-left .header-logo {
+  height: 50px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.header-quote {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #ffdd57;
+}
+
+.logout-button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #e60000;
+}
+
+/* MAIN AREA */
+.layout-main {
+  padding: 30px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  flex: 1;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #003366;
+  color: #fff;
+  padding: 40px 20px 10px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  border-bottom: 2px solid #ffdd57;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column a,
+.footer-column p,
+.footer-btn {
+  color: #ffdd57;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.footer-btn:hover,
+.footer-column a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffdd57;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #cccccc;
+}
