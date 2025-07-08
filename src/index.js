@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { Provider } from 'react-redux';
-import store from './Components/LocalStorageData/store';
+import store from './Components/redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.Provider store={store}>
+  <Provider store={store}>
     <App />
-  </React.Provider>
+  </Provider>
 );
