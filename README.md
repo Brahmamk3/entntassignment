@@ -175,7 +175,7 @@ entntassignment/
 
 ## 🛎️ Submission Notes
 
-* App deployed on \[Vercel / Netlify / GitHub Pages]
+* App deployed on Netlify 
 * GitHub repository contains meaningful commit history
 * Code follows component-based architecture and CSS separation
 * Submitted to `hr@entnt.in` before the deadline
