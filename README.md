@@ -1,70 +1,188 @@
-# Getting Started with Create React App
+# ENTNT Dental Center Management Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully functional React-based Dental Center Management Dashboard built for the ENTNT Frontend Developer Assignment.
 
-## Available Scripts
+This application allows Admin (Dentist) users to manage patients and their appointments (incidents), and allows Patients to view their treatment history and upcoming appointments. All data is managed entirely on the frontend using **localStorage**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Live Demo & Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Deployed Link**: [Your Deployed App](https://your-deployment-url.vercel.app)
+* **GitHub Repo**: [Your GitHub Repo](https://github.com/your-username/entntassignment)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📆 Project Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/your-username/entntassignment.git
+cd entntassignment
+npm install
+npm start
+```
 
-### `npm run build`
+App runs on: [http://localhost:3000](http://localhost:3000)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📏 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+entntassignment/
+├── public/
+│   └── index.html               # Main HTML template
 
-### `npm run eject`
+├── src/
+│   ├── Components/
+│   │
+│   │   ├── authentication/      # Login logic & styling
+│   │   │   ├── Login.js         # Login form component
+│   │   │   └── Login.css        # Login page styles
+│   │
+│   │   ├── calendarview/        # Calendar of appointments
+│   │   │   ├── CalendarView.js  # Calendar display + filter
+│   │   │   └── CalendarView.css # Calendar styling
+│   │
+│   │   ├── dashboard/           # KPIs & summary
+│   │   │   ├── Dashboard.js     # Dashboard landing component
+│   │   │   └── Dashboard.css    # Dashboard styles
+│   │
+│   │   ├── home/                # Landing page
+│   │   │   ├── Home.js          # App welcome/intro section
+│   │   │   └── Home.css         # Home component styles
+│   │
+│   │   ├── incident/            # Appointment CRUD
+│   │   │   ├── IncidentManagement.js   # Incident add/edit/list
+│   │   │   └── IncidentManagement.css  # Incident styles
+│   │
+│   │   ├── layout/              # Header / Footer / Navigation
+│   │   │   ├── Layout.js        # Shared layout structure
+│   │   │   └── Layout.css       # Layout styling
+│   │
+│   │   ├── patient/             # Manage patients (Admin only)
+│   │   │   ├── AddPatientDetails.js    # Add new patient form
+│   │   │   ├── EditPatientDetails.js   # Edit patient info
+│   │   │   ├── DeletePatientDetails.js # Delete patient record
+│   │   │   ├── PatientManagement.js    # List + control patients
+│   │   │
+│   │   │   └── patientcss/      # CSS for patient components
+│   │   │       ├── AddPatientDetails.css    # Add form styling
+│   │   │       ├── EditPatientDetails.css   # Edit form styling
+│   │   │       ├── DeletePatientDetails.css # Delete view styling
+│   │   │       └── PatientManagement.css    # Table/list styling
+│   │
+│   │   ├── patientView/         # Patient-only view
+│   │   │   ├── PatientView.js   # View patient history/appointments
+│   │   │   └── PatientView.css  # Styling for patient view
+│
+│   ├── redux/                   # Redux store and reducer
+│   │   ├── LocalData.js         # Initial local mock data
+│   │   ├── Reducer.js           # Combined reducer logic
+│   │   └── store.js             # Store config for Redux
+│
+│   ├── App.js                   # Routes and layout rendering
+│   ├── App.css                  # Global app styles
+│   ├── index.js                 # App entry point
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+├── .gitignore                   # Files to ignore in Git
+├── README.md                    # Project documentation
+├── package.json                 # Dependencies & scripts
+├── package-lock.json / yarn.lock  # Exact package versions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ✅ Features
 
-## Learn More
+### Authentication (Simulated)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Hardcoded users with roles: Admin & Patient
+* Email/password login
+* Role-based access control
+* Session persisted using localStorage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Admin Features
 
-### Code Splitting
+* CRUD operations on patients
+* Create/edit incidents (title, comments, cost, treatment, files)
+* View calendar (monthly overview of incidents)
+* View dashboard with KPIs (appointments, revenue, etc.)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Patient Features
 
-### Analyzing the Bundle Size
+* View only their data
+* Upcoming appointments
+* Appointment history with cost, treatment, and files
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Common
 
-### Making a Progressive Web App
+* File uploads (converted to base64)
+* Fully responsive
+* All data stored and read from localStorage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📚 Component Descriptions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Component                 | Purpose                                       |
+| ------------------------- | --------------------------------------------- |
+| `Login.js`                | Handles login for both Admin and Patient      |
+| `Layout.js`               | Global layout: nav bar, header, footer        |
+| `Dashboard.js`            | Displays KPIs (appointments, revenue, etc.)   |
+| `CalendarView.js`         | Monthly view of incidents with clickable days |
+| `PatientManagement.js`    | Admin can view all patients                   |
+| `AddPatientDetails.js`    | Admin adds a new patient                      |
+| `EditPatientDetails.js`   | Admin edits patient info                      |
+| `DeletePatientDetails.js` | Admin deletes a patient                       |
+| `IncidentManagement.js`   | Admin manages incidents per patient           |
+| `PatientView.js`          | Patient sees upcoming and past treatments     |
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## ⚙️ Technical Choices
 
-### `npm run build` fails to minify
+* **React + Redux** for state management
+* **React Router v6** for routing
+* **Custom CSS** in component folders
+* **localStorage** used to simulate backend
+* **Base64/Blob** used for file upload preview & storage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🚫 Known Limitations
+
+* File storage in localStorage can slow down on large files
+* No backend or real auth service used
+* No advanced filtering/searching in tables
+
+---
+
+## 📄 Sample Users
+
+```json
+{
+  "users": [
+    { "id": "1", "role": "Admin", "email": "admin@entnt.in", "password": "admin123" },
+    { "id": "2", "role": "Patient", "email": "john@entnt.in", "password": "patient123", "patientId": "p1" }
+  ]
+}
+```
+
+---
+
+## 🛎️ Submission Notes
+
+* App deployed on \[Vercel / Netlify / GitHub Pages]
+* GitHub repository contains meaningful commit history
+* Code follows component-based architecture and CSS separation
+* Submitted to `hr@entnt.in` before the deadline
+
+---
+
+## 👩‍💼 Author
+
+**Sakhamuri Veera Brahmanjaneyulu**
+🔗 [LinkedIn](https://www.linkedin.com/in/s-v-brahmanjaneyulu-61a57a252/)
+📧 [sakamuriveera@gmail.com](mailto:sakamuriveera@gmail.com)
