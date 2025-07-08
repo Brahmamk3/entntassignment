@@ -8,8 +8,8 @@ This application allows Admin (Dentist) users to manage patients and their appoi
 
 ## 🚀 Live Demo & Repository
 
-* **Deployed Link**: [Your Deployed App](https://your-deployment-url.vercel.app)
-* **GitHub Repo**: [Your GitHub Repo](https://github.com/your-username/entntassignment)
+* **Deployed Link**: https://gentle-granita-9e6b74.netlify.app/
+* **GitHub Repo**: https://github.com/Brahmamk3/entntassignment/tree/master
 
 ---
 
@@ -35,7 +35,8 @@ entntassignment/
 
 ├── src/
 │   ├── Components/
-│   │
+│   │   |
+|   |   common/
 │   │   ├── authentication/      # Login logic & styling
 │   │   │   ├── Login.js         # Login form component
 │   │   │   └── Login.css        # Login page styles
