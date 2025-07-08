@@ -1,0 +1,84 @@
+.incident-container {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fbfc;
+}
+
+.incident-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.incident-table-wrapper {
+  overflow-x: auto;
+}
+
+.incident-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.incident-table th,
+.incident-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.incident-table th {
+  background-color: #e3f2fd;
+  color: #333;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination .active {
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+
+  .incident-table th,
+  .incident-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .incident-title {
+    font-size: 22px;
+  }
+}
